@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.roboto{
+    font-family: "Roboto", sans-serif;
+}
+.small{
+    font-family: "Style Script", cursive;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.large-text{
+    font-size: 600px;
+    letter-spacing: -50px;
+    line-height: 1;
+    transform: translateX(-30px);
+}
+#hero h1 span{
+    display: inline-block;
+}
+
+.sub-line{
+    font-size: 200px;
+    line-height: .8;
+    font-weight: 700;
+}
+/* #circle{
+    font-family: cursive;
+    font-size: 40px;
+}
+#curve{
+    fill: transparent;
+} */
+/* .text{
+    fill: white;
+} */
+.oval{
+    display: block;
+    margin: 40px 10px;
+    padding: 40px 100px;
+    border: .8px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.oval:hover{
+    margin: 10px 10px;
+    padding: 70px 100px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 40%;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 100%;
+}
