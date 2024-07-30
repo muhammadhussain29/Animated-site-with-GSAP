@@ -1,3 +1,28 @@
+let cursor = document.querySelector('#cursor')
+let customCursor = document.querySelectorAll('#custom-cursor')
+
+
+customCursor.forEach(element => {
+    element.addEventListener('mouseenter',(e)=>{
+        gsap.to(cursor,{
+            display: 'flex'
+        })
+    })
+    element.addEventListener('mouseleave',(e)=>{
+        gsap.to(cursor,{
+            display: 'none'
+        })
+    })
+    element.addEventListener('mousemove',(e)=>{
+        gsap.to(cursor,{
+            x:(e.x - 40),
+            y:(e.y - 40)
+        })
+    })
+});
+
+
+
 var lastScrollTop;
 navbar = document.getElementById('navbar');
 window.addEventListener('scroll',function(){
@@ -73,5 +98,17 @@ gsap.to("#expertise h1",{
         end:"top -100%",
         scrub:2,
         pin:true
+    }
+})
+
+gsap.from("#last-heading span",{
+    duration: 2,
+    y:80,
+    delay:0.5,
+    stagger:0.2,
+    scrollTrigger:{
+        trigger:"#last-heading",
+        scroller: "body",
+        scrub: 2
     }
 })
