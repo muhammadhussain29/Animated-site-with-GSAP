@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Animate with GSAP</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-black  roboto ">
     <!-- Cursor -->
-    <div id="cursor" class="w-16 z-10 h-16 rounded-full bg-black text-white hidden fixed justify-center items-center text-3xl">&rarr;</div>
+    <div id="cursor" class="w-16 z-10 h-16 rounded-full cursor-default bg-black text-white hidden fixed justify-center items-center text-3xl">&rarr;</div>
     <!-- loader -->
     <div id="loader" class="flex justify-center items-center bg-orange-200 h-screen w-screen z-30 fixed top-0">
         <img class="load-img-1 hidden" src="asset/loader-1-removebg-preview.png" alt="">
@@ -58,7 +58,7 @@
         <!-- boxes -->
          <div class="flex justify-between items-end">
              <div class="mr-32 -translate-y-14 w-2/3">
-                <div class="overflow-hidden hover:m-3 transition-all">
+                <div class="relative overflow-hidden hover:m-3 transition-all">
                     <video id="custom-cursor" class="inline-block hover:scale-110 transition-all" src="asset/p-1.mp4" loop autoplay muted></video>
                 </div>
                  <p class="text-white text-lg uppercase mt-4">hec paris iec</p>

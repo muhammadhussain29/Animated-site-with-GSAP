@@ -1,6 +1,11 @@
 let cursor = document.querySelector('#cursor')
 let customCursor = document.querySelectorAll('#custom-cursor')
-
+document.querySelector('body').addEventListener('mousemove',(e)=>{
+    gsap.to(cursor,{
+        x:(e.x - 40),
+        y:(e.y - 40)
+    })
+})
 
 customCursor.forEach(element => {
     element.addEventListener('mouseenter',(e)=>{
@@ -11,12 +16,6 @@ customCursor.forEach(element => {
     element.addEventListener('mouseleave',(e)=>{
         gsap.to(cursor,{
             display: 'none'
-        })
-    })
-    element.addEventListener('mousemove',(e)=>{
-        gsap.to(cursor,{
-            x:(e.x - 40),
-            y:(e.y - 40)
         })
     })
 });
