@@ -2,8 +2,8 @@ let cursor = document.querySelector('#cursor')
 let customCursor = document.querySelectorAll('#custom-cursor')
 document.querySelector('body').addEventListener('mousemove',(e)=>{
     gsap.to(cursor,{
-        x:(e.x - 40),
-        y:(e.y - 40)
+        x:(e.x - 10),
+        y:(e.y - 120)
     })
 })
 
@@ -20,8 +20,7 @@ customCursor.forEach(element => {
     })
 });
 
-
-
+// Navbar scroll hide/show
 var lastScrollTop;
 navbar = document.getElementById('navbar');
 window.addEventListener('scroll',function(){
@@ -78,8 +77,8 @@ gsap.to("#brand-video",{
 gsap.from("#tagline h2 span",{
     duration: 2,
     y:200,
-    delay:0.5,
-    stagger:0.2,
+    delay:0.8,
+    stagger:0.5,
     scrollTrigger:{
         trigger:"#tagline h2",
         scroller: "body",
@@ -88,22 +87,21 @@ gsap.from("#tagline h2 span",{
 })
 // Experience
 gsap.to("#expertise h1",{
-    transform:"translateX(-120%)",
+    x:"-130%",
     scrollTrigger:{
         trigger:"#expertise",
         scroller:"body",
-        marker:true,
+        // markers:true,
         start:"top -0%",
         end:"top -100%",
-        scrub:2,
+        scrub:1,
         pin:true
     }
 })
-
+// get in touch
 gsap.from("#last-heading span",{
     duration: 2,
-    y:80,
-    delay:0.5,
+    y:100,
     stagger:0.2,
     scrollTrigger:{
         trigger:"#last-heading",

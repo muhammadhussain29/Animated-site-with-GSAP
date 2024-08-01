@@ -9,6 +9,18 @@
 <body class="bg-black  roboto ">
     <!-- Cursor -->
     <div id="cursor" class="w-16 z-10 h-16 rounded-full cursor-default bg-black text-white hidden fixed justify-center items-center text-3xl">&rarr;</div>
+    <!-- navbar -->
+    <nav id="navbar" class="fixed w-full bg-black flex justify-between items-center p-5 z-10 transition-all">
+        <div class="logo">
+            <img class="w-16" src="asset/logo.jpg" alt="">
+        </div>
+        <ul class="flex gap-20 text-xl px-5">
+            <li><a class="text-orange-200 hover:text-orange-400" href="">Projects</a></li>
+            <li><a class="text-orange-200 hover:text-orange-400" href="">Expertise</a></li>
+            <li><a class="text-orange-200 hover:text-orange-400" href="">The team</a></li>
+            <li><a class="text-orange-200 hover:text-orange-400" href="">Contact</a></li>
+        </ul>
+    </nav>
     <!-- loader -->
     <div id="loader" class="flex justify-center items-center bg-orange-200 h-screen w-screen z-30 fixed top-0">
         <img class="load-img-1 hidden" src="asset/loader-1-removebg-preview.png" alt="">
@@ -22,30 +34,19 @@
         <img class="load-img-9 hidden" src="asset/loader-9-removebg-preview.png" alt="">
     </div>
 
-    <!-- navbar -->
-    <nav id="navbar" class="fixed w-full bg-black flex justify-between items-center p-5 z-10 transition-all">
-        <div class="logo">
-            <img class="w-16" src="asset/logo.jpg" alt="">
-        </div>
-        <ul class="flex gap-20 text-xl px-5">
-            <li><a class="text-orange-200 hover:text-orange-400" href="">Projects</a></li>
-            <li><a class="text-orange-200 hover:text-orange-400" href="">Expertise</a></li>
-            <li><a class="text-orange-200 hover:text-orange-400" href="">The team</a></li>
-            <li><a class="text-orange-200 hover:text-orange-400" href="">Contact</a></li>
-        </ul>
-    </nav>
+    
     <!-- Hero -->
-    <section id="hero" class="text-center h-screen content-center">
+    <section id="hero" class="text-center my-24 content-center">
             <h1 class="text-center text-orange-200 large-text font-black "><span>H</span><span>e</span><span>l</span><span>l</span><span>o</span></h1>
+            <h4 class="text-orange-200 text-4xl capitalize mt-20">WE ARE THE TEAM</h4>
+            <h4 class="text-orange-200 text-4xl capitalize mb-20">WE THINK ELASTIC</h4>
         </section>
         <!-- brand video -->
-        <section class="text-center">
-        <h4 class="text-orange-200 text-4xl capitalize mt-20">WE ARE THE TEAM</h4>
-        <h4 class="text-orange-200 text-4xl capitalize mb-20">WE THINK ELASTIC</h4>
+        <section class="text-center h-screen">
          <video id="brand-video" class="w-96 mx-auto" src="asset/video-start.mp4" loop autoplay muted></video>
     </section>
     <!-- tagline -->
-    <section id="tagline" class="my-40 ml-72 flex flex-col" >
+    <section id="tagline" class="my-60 ml-72 flex flex-col" >
         <h2 class="sub-line text-left text-orange-200 overflow-hidden roboto"><span class="inline-block"><span class="small">we</span> HELP</span></h2>
         <h2 class="sub-line text-left text-orange-200 overflow-hidden roboto"><span class="inline-block">MARKS</span></h2>
         <h2 class="sub-line text-left text-orange-200 overflow-hidden roboto"><span class="inline-block"><span class="small">to</span> GROW</span></h2>
@@ -107,7 +108,7 @@
     <section id="expertise" class="bg-indigo-300 h-screen w-screen overflow-x-hidden px-20 content-center">
     <h1 class="text-center text-black large-text uppercase font-semibold">expertise</h1>
     </section>
-    <section class="bg-indigo-300">
+    <section class="bg-indigo-300 -translate-y-1">
 
         <div class="flex justify-between py-36 px-28">
             <div>
