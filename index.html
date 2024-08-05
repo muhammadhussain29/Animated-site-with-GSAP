@@ -7,20 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-black  roboto ">
+    
     <!-- Cursor -->
     <div id="cursor" class="w-16 z-10 h-16 rounded-full cursor-default bg-black text-white hidden fixed justify-center items-center text-3xl">&rarr;</div>
-    <!-- navbar -->
-    <nav id="navbar" class="fixed w-full bg-black flex justify-between items-center p-5 z-10 transition-all">
-        <div class="logo">
-            <img class="w-16" src="asset/logo.jpg" alt="">
-        </div>
-        <ul class="flex gap-20 text-xl px-5">
-            <li><a class="text-orange-200 hover:text-orange-400" href="">Projects</a></li>
-            <li><a class="text-orange-200 hover:text-orange-400" href="">Expertise</a></li>
-            <li><a class="text-orange-200 hover:text-orange-400" href="">The team</a></li>
-            <li><a class="text-orange-200 hover:text-orange-400" href="">Contact</a></li>
-        </ul>
-    </nav>
+    
     <!-- loader -->
     <div id="loader" class="flex justify-center items-center bg-orange-200 h-screen w-screen z-30 fixed top-0">
         <img class="load-img-1 hidden" src="asset/loader-1-removebg-preview.png" alt="">
@@ -34,6 +24,35 @@
         <img class="load-img-9 hidden" src="asset/loader-9-removebg-preview.png" alt="">
     </div>
 
+    <!-- navbar -->
+    <nav id="navbar" class="fixed top-0 w-full bg-black flex justify-between items-center p-5 z-20 transition-all">
+        <div class="logo">
+            <img class="w-16" src="asset/logo.jpg" alt="">
+        </div>
+        <div id="nav-btn" class="open block md:hidden">
+            <div id="line-1" class="h-1 w-10 my-2 bg-orange-200" ></div>
+            <div id="line-2" class="h-1 w-10 my-2 bg-orange-200" ></div>
+        </div>
+        <ul class="gap-20 text-xl px-5 md:flex hidden">
+            <li><a class="text-orange-200 hover:text-orange-400" href="">Projects</a></li>
+            <li><a class="text-orange-200 hover:text-orange-400" href="">Expertise</a></li>
+            <li><a class="text-orange-200 hover:text-orange-400" href="">The team</a></li>
+            <li><a class="text-orange-200 hover:text-orange-400" href="">Contact</a></li>
+        </ul>
+    </nav>
+<!-- nav for small screen -->
+    <nav id="nav-small" class="fixed flex flex-col justify-between bg-black z-10 h-screen w-screen -translate-y-24 pt-36 pb-10 translate-x-full">
+        <ul class="flex flex-col gap-5 text-4xl font-medium px-10 uppercase">
+            <li class="overflow-hidden" ><a class="inline-block text-orange-200 hover:text-orange-400" href="">Projects</a></li>
+            <li class="overflow-hidden" ><a class="inline-block text-orange-200 hover:text-orange-400" href="">Expertise</a></li>
+            <li class="overflow-hidden" ><a class="inline-block text-orange-200 hover:text-orange-400" href="">The team</a></li>
+            <li class="overflow-hidden" ><a class="inline-block text-orange-200 hover:text-orange-400" href="">Contact</a></li>
+        </ul>
+        <div>
+            <p class="text-lg text-orange-200 px-10">uncafe@wethinkelastic.com</p>
+            <p class="text-lg text-orange-200 px-10">01 71 11 35 46</p>
+        </div>
+    </nav>
     
     <!-- Hero -->
     <section id="hero" class="text-center my-24 content-center">

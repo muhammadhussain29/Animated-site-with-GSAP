@@ -1,3 +1,4 @@
+// ------------------------------------------------------------------ Cursor
 let cursor = document.querySelector('#cursor')
 let customCursor = document.querySelectorAll('#custom-cursor')
 document.querySelector('body').addEventListener('mousemove',(e)=>{
@@ -20,20 +21,7 @@ customCursor.forEach(element => {
     })
 });
 
-// Navbar scroll hide/show
-var lastScrollTop;
-navbar = document.getElementById('navbar');
-window.addEventListener('scroll',function(){
-var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-if(scrollTop > lastScrollTop){
-    navbar.style.top='-100px';
-}
-else{
-    navbar.style.top='0';
-}
-lastScrollTop = scrollTop;
-});
-
+// ------------------------------------------------------------------ loader animation
 gsap.to("#loader",{
     height: 0,
     duration: 1,
@@ -55,7 +43,80 @@ for (let i = 1; i < 10; i++) {
         })  
     }, (i*200)+200);
 }
-// Hello animation
+
+// ------------------------------------------------------------------ Navbar scroll hide/show
+var lastScrollTop;
+navbar = document.getElementById('navbar');
+
+let navOnScroll = (scrollTop)=>{
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if(scrollTop > lastScrollTop){
+        navbar.style.top='-100px';
+    }
+    else{
+        navbar.style.top='0';
+    }
+    lastScrollTop = scrollTop;
+}
+
+window.addEventListener('scroll',navOnScroll);
+
+// ------------------------------------------------------------------ Nav button opening/closing animation for small screen
+let tlBtn1 = new gsap.timeline()
+let tlBtn2 = new gsap.timeline()
+tlBtn1.to("#nav-btn #line-1",{
+    duration:0.3,
+    margin:0,
+    stagger:0.1
+})
+tlBtn1.to("#nav-btn #line-1",{
+    duration:1,
+    transform: "rotate(45deg) translate(-8px, 3px)",
+    stagger:0.1
+})
+tlBtn2.to("#nav-btn #line-2",{
+    duration:0.3,
+    margin:0,
+    stagger:0.1
+})
+tlBtn2.to("#nav-btn #line-2",{
+    duration:1,
+    transform: "rotate(-45deg) translate(0px, -12px)",
+    stagger:0.1
+})
+tlBtn1.paused(true)
+tlBtn2.paused(true)
+
+// ------------------------------------------------------------------ nav Show Hide animation for small screen
+let navSmall = new gsap.timeline()
+navSmall.to('#nav-small', {
+    duration:1,
+    x:"0%"
+})
+navSmall.from('#nav-small ul li a',{
+    y:50,
+    stagger:0.2
+})
+navSmall.paused(true)
+
+// ------------------------------------------------------------------ Nav button for small screen
+let navBtn = document.getElementById('nav-btn');
+navBtn.addEventListener('click', () => {
+    if (navBtn.classList.contains('open')) {
+        tlBtn1.play()
+        tlBtn2.play()
+        navSmall.play()
+        window.removeEventListener('scroll',navOnScroll)
+    } else {
+        tlBtn1.reverse();
+        tlBtn2.reverse();
+        navSmall.reverse()
+        window.addEventListener('scroll',navOnScroll)
+    }
+    navBtn.classList.toggle('open');
+});
+
+// ------------------------------------------------------------------ Hello animation
 gsap.from("#hero h1 span",{
     duration: 1,
     delay:2.6,
@@ -63,7 +124,7 @@ gsap.from("#hero h1 span",{
     opacity:0,
     stagger:0.1
 })
-// brand video
+// ------------------------------------------------------------------ brand video
 gsap.to("#brand-video",{
     duration: 1,
     width: "100%",
@@ -73,7 +134,7 @@ gsap.to("#brand-video",{
         scrub: 2
     }
 })
-// tagline
+// ------------------------------------------------------------------ tagline
 gsap.from("#tagline h2 span",{
     duration: 2,
     y:200,
@@ -85,7 +146,7 @@ gsap.from("#tagline h2 span",{
         scrub: 2
     }
 })
-// Experience
+// ------------------------------------------------------------------ Experience
 gsap.to("#expertise h1",{
     x:"-130%",
     scrollTrigger:{
@@ -97,7 +158,7 @@ gsap.to("#expertise h1",{
         pin:true
     }
 })
-// get in touch
+// ------------------------------------------------------------------ get in touch
 gsap.from("#last-heading span",{
     duration: 2,
     y:100,
