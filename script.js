@@ -91,9 +91,8 @@ gsap.to("#expertise h1",{
     scrollTrigger:{
         trigger:"#expertise",
         scroller:"body",
-        // markers:true,
         start:"top -0%",
-        end:"top -100%",
+        end:"top -400%",
         scrub:1,
         pin:true
     }

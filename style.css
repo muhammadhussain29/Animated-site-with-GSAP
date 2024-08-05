@@ -19,30 +19,19 @@
 }
 
 .large-text{
-    font-size: 600px;
-    letter-spacing: -50px;
+    font-size: clamp(8rem,30vw,35rem);
     line-height: 1;
-    transform: translateX(-30px);
 }
 #hero h1 span{
     display: inline-block;
 }
 
 .sub-line{
-    font-size: 200px;
+    font-size: clamp(4rem,12vw,20rem);
+    /* font-size: 200px; */
     line-height: .8;
     font-weight: 700;
 }
-/* #circle{
-    font-family: cursive;
-    font-size: 40px;
-}
-#curve{
-    fill: transparent;
-} */
-/* .text{
-    fill: white;
-} */
 .oval{
     display: block;
     margin: 40px 10px;
