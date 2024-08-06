@@ -65,24 +65,20 @@ window.addEventListener('scroll',navOnScroll);
 let tlBtn1 = new gsap.timeline()
 let tlBtn2 = new gsap.timeline()
 tlBtn1.to("#nav-btn #line-1",{
-    duration:0.3,
+    duration:0.2,
     margin:0,
-    stagger:0.1
 })
 tlBtn1.to("#nav-btn #line-1",{
-    duration:1,
+    duration:0.7,
     transform: "rotate(45deg) translate(-8px, 3px)",
-    stagger:0.1
 })
 tlBtn2.to("#nav-btn #line-2",{
-    duration:0.3,
+    duration:0.2,
     margin:0,
-    stagger:0.1
 })
 tlBtn2.to("#nav-btn #line-2",{
-    duration:1,
+    duration:0.7,
     transform: "rotate(-45deg) translate(0px, -12px)",
-    stagger:0.1
 })
 tlBtn1.paused(true)
 tlBtn2.paused(true)
@@ -90,12 +86,13 @@ tlBtn2.paused(true)
 // ------------------------------------------------------------------ nav Show Hide animation for small screen
 let navSmall = new gsap.timeline()
 navSmall.to('#nav-small', {
-    duration:1,
+    duration:0.7,
     x:"0%"
 })
 navSmall.from('#nav-small ul li a',{
+    duration:0.5,
     y:50,
-    stagger:0.2
+    stagger:0.1
 })
 navSmall.paused(true)
 
@@ -136,10 +133,9 @@ gsap.to("#brand-video",{
 })
 // ------------------------------------------------------------------ tagline
 gsap.from("#tagline h2 span",{
-    duration: 2,
-    y:200,
-    delay:0.8,
-    stagger:0.5,
+    duration: 1,
+    y:100,
+    delay:0.5,
     scrollTrigger:{
         trigger:"#tagline h2",
         scroller: "body",
@@ -148,7 +144,7 @@ gsap.from("#tagline h2 span",{
 })
 // ------------------------------------------------------------------ Experience
 gsap.to("#expertise h1",{
-    x:"-130%",
+    x:"-150%",
     scrollTrigger:{
         trigger:"#expertise",
         scroller:"body",

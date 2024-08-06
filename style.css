@@ -19,7 +19,7 @@
 }
 
 .large-text{
-    font-size: clamp(8rem,30vw,35rem);
+    font-size: clamp(7rem,30vw,38rem);
     line-height: 1;
 }
 #hero h1 span{
@@ -28,7 +28,6 @@
 
 .sub-line{
     font-size: clamp(4rem,12vw,20rem);
-    /* font-size: 200px; */
     line-height: .8;
     font-weight: 700;
 }
